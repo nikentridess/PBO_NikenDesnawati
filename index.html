@@ -2,46 +2,50 @@
 <html>
 
 <head>
-    <title>KASIR TOKO</title>
+    <title>Beranda</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function bukaBukuTamu() {
+            var nama = prompt("Masukkan Nama Anda:");
+            var email = prompt("Masukkan Email Anda:");
+            var pesan = prompt("Masukkan Pesan Anda:");
+
+            console.log("Nama:", nama);
+            console.log("Email:", email);
+            console.log("Pesan:", pesan);
+
+            var table = document.getElementById("bukuTamuTable");
+            var newRow = table.insertRow();
+            newRow.insertCell(0).innerText = nama;
+            newRow.insertCell(1).innerText = email;
+            newRow.insertCell(2).innerText = pesan;
+
+            alert("Terima kasih telah mengisi buku tamu, " + nama + "!");
+        }
+    </script>
 </head>
 
 <body>
-
-    <body>
-        <div>
-            <img src="https://png.pngtree.com/png-clipart/20210328/original/pngtree-the-online-shop-logo-uses-a-colorful-house-concept-png-image_6151588.jpg"
-                height="100px"></img>
-        </div>
-        <div <div
-            style="color: #ffff; margin: 0; background: purple; padding: 20px; font-size: 1.5em; text-align: center;">
-            KASIR TOKO CANTIK</div>
-        <hr widht="25%" align="left" size="5px" color="red">
-        <ul type="I">
-            <li> Login </li>
-
-            <form action="home.html" method="get">
-                <table border="0">'
-                    <tr>
-                        <td>Username</td>
-                        <td>: <input type="text" name="namalengkap"></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td>: <input type="password" name="password"></td>
-                    </tr>
-                    <tr>
-                        <td>Level</td>
-                        <td>: <select name="jabatan">
-                                <option value="Owner">Owner</option>
-                                <option value="Admin" selected="selected">Admin</option>
-                            </select></td>
-                    </tr>
-                    <td><input type="submit" name="Login" value="Login"></td>
-                    </tr>
-                    </tr>
-                </table>
-            </form>
-    </body>
+    <h1>
+        <div style="color: blue; margin: 0; background: skyblue; padding: 20px; font-size: 24px; text-align: center;">
+            Selamat Datang di Halaman Beranda</div>
+    </h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd2AKtbwLD1LJ6V3ylvhsOeqxPTffVDlX2aQ&s"
+        height="250px"></img><br></br>
+    <a href="about.html">Tentang Kami</a><br><br>
+    <button onclick="bukaBukuTamu()">Buka Buku Tamu</button>
+    <h2>Data Buku Tamu</h2>
+    <table id="bukuTamuTable" border="1" style="width: 100%; text-align: left;">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Pesan</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 </body>
 
 </html>
